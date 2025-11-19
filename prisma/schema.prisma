@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Link {
+  id          Int      @id @default(autoincrement())
+  originalUrl String   // The long URL
+  shortCode   String   @unique // The custom or random code (e.g., "docs")
+  clicks      Int      @default(0)
+  lastClicked DateTime? // Nullable because it starts with 0 clicks
+  createdAt   DateTime @default(now())
+
+  // We add an index on shortCode because we will be searching by it 
+  // every time someone clicks a link. It makes the lookup much faster.
+  @@index([shortCode])
+}
