@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TinyLink 🔗
 
-## Getting Started
+A full-stack URL shortener application built with **Next.js 14 (App Router)**, **TypeScript**, and **PostgreSQL**.
 
-First, run the development server:
+This project allows users to shorten long URLs, customize their short codes, track real-time click statistics, and manage links via a clean, responsive dashboard.
 
+## 🚀 Live Demo
+**[View Live Application](https://tinylink-YOURNAME.vercel.app)**
+*(Replace this link with your actual Vercel URL)*
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + Lucide React (Icons)
+- **Database:** PostgreSQL (hosted on Neon)
+- **ORM:** Prisma
+- **Deployment:** Vercel
+
+---
+
+## ✨ Key Features
+
+- **Link Shortening:** Convert long URLs into short, shareable links.
+- **Custom Codes:** Users can optionally choose a custom alias (e.g., `/my-portfolio`).
+- **Collision Handling:** robust logic to ensure unique codes; random codes are regenerated if a collision occurs.
+- **Real-time Analytics:** Track total clicks and "Last Clicked" timestamps.
+- **Clean Dashboard:** View, copy, visit, and delete links from a responsive table.
+- **Performance:** Database queries are optimized using indexing on the `shortCode` column for fast redirects.
+- **Health Check:** Dedicated `/healthz` endpoint for automated uptime monitoring.
+
+---
+
+## ⚙️ Getting Started Locally
+
+Follow these steps to run the project on your local machine.
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/favas0786/tinylink.git](https://github.com/favas0786/tinylink.git)
+cd tinylink
