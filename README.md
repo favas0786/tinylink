@@ -5,8 +5,8 @@ A full-stack URL shortener application built with **Next.js 14 (App Router)**, *
 This project allows users to shorten long URLs, customize their short codes, track real-time click statistics, and manage links via a clean, responsive dashboard.
 
 ## 🚀 Live Demo
-**[View Live Application](https://tinylink-YOURNAME.vercel.app)**
-*(Replace this link with your actual Vercel URL)*
+**[View Live Application](tinylink-beige.vercel.app)**
+
 
 ---
 
